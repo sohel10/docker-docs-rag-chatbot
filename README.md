@@ -1,7 +1,9 @@
 # 📦 Docker Docs RAG Chatbot
 
+## 🚀 FastAPI Backend
+
 <p align="center">
-  <img src="api.png" alt="FastAPI RAG API" width="900"/>
+  <img src="./api.png" alt="FastAPI RAG API" width="900"/>
 </p>
 
 <p align="center">
