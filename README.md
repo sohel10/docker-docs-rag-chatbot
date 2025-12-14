@@ -1,12 +1,24 @@
 
 # 📦 Docker Docs RAG Chatbot
 
-A production-style **Retrieval-Augmented Generation (RAG)** chatbot built using
-Docker documentation and security PDFs.  
+A production-style Retrieval-Augmented Generation (RAG) system that answers questions strictly from Docker documentation and security PDFs, with transparent source attribution.
+Built with FastAPI, Streamlit, FAISS, Ollama, and Docker Compose, this project demonstrates end-to-end AI system design, from document ingestion to API + UI deployment. 
 The system answers questions **strictly from provided documents**, with
 transparent source attribution.
+# 🚀 Why This Project Matters
 
----
+# This repository is designed to showcase real-world AI engineering skills
+
+✅ Document-grounded answers 
+
+✅ API-first architecture
+
+✅ Containerized deployment
+
+✅ Local LLM inference (privacy-preserving)
+
+✅ Recruiter-ready, production layout
+
 
 ## 🚀 Features
 
@@ -17,7 +29,6 @@ transparent source attribution.
 - 🔎 Source citations for every answer
 - 🔒 Fully local / private (no OpenAI or external APIs)
 
----
 
 ## 🧱 Architecture
 
