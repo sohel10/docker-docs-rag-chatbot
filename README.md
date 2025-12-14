@@ -114,31 +114,23 @@ This alone already makes your repo look serious.
 
 # ✅ STEP 2 — Add FastAPI Backend
 
-This allows:
-- API usage
-- Cloud deployment
-- CI testing
-- Separation of UI and logic
+## 🚀 Deployment
 
-## Deploy to AWS EC2
-EC2 Setup (one time)
+Designed for production-style deployment on **AWS EC2** using Docker Compose.
 
-Instance: t3.medium
+- API (FastAPI) and UI (Streamlit) run as separate services
+- Ollama runs locally inside a container for private LLM inference
+- Services can be scaled independently
 
-OS: Ubuntu 22.04
+```bash
+docker compose up --build
+Access:
 
-Storage: 30–50 GB
+API Docs → http://localhost:8000/docs
 
-Open ports:
+Chat UI → http://localhost:8501
 
-22 (SSH)
 
-8000 (API)
-
-8501 (Streamlit)
-
-🔹 SSH into EC2
-ssh ubuntu@<EC2_PUBLIC_IP>
 
 🔹 Install system deps
 sudo apt update
