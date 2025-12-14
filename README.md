@@ -48,15 +48,11 @@ transparent source attribution.
 - 🔒 Fully local / private (no OpenAI or external APIs)
 
 
-## 🧱 Architecture
-
-
-
 
 ## 🧱 RAG Architecture
 
 <p align="center">
-  <img src="rag.png" alt="RAG Pipeline Architecture" width="800"/>
+  <img src="rag.png" alt="RAG Pipeline Architecture" width="400"/>
 </p>
 
 <p align="center">
