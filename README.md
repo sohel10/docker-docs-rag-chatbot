@@ -48,8 +48,7 @@ Ollama LLM
 ↓
 Answer + Sources
 
-
----
+**Data Flow:** Documents → Chunking → Embeddings → FAISS → FastAPI → Streamlit
 
 ## 📁 Project Structure
 
