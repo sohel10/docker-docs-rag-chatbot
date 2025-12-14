@@ -31,10 +31,27 @@ transparent source attribution.
 
 
 ## 🧱 Architecture
-System Overview
-<p align="center"> <img src="api.png" alt="FastAPI RAG API" width="85%"> </p> <p align="center"> <img src="streamlit.png" alt="Streamlit RAG Chat UI" width="85%"> </p>
-Data & Inference Flow
-<p align="center"> <img src="rag.png" alt="RAG Pipeline Architecture" width="70%"> </p>
+
+### FastAPI Backend
+<p align="center">
+  <img src="api.png" width="85%">
+  <br/>
+  <em>FastAPI service exposing document-grounded RAG inference</em>
+</p>
+
+### Streamlit UI
+<p align="center">
+  <img src="streamlit.png" width="85%">
+  <br/>
+  <em>Interactive chat UI for querying Docker documentation</em>
+</p>
+
+### RAG Pipeline
+<p align="center">
+  <img src="rag.png" width="70%">
+  <br/>
+  <em>End-to-end Retrieval-Augmented Generation workflow</em>
+</p>
 
 **Data Flow:** Documents → Chunking → Embeddings → FAISS → FastAPI → Streamlit
 
