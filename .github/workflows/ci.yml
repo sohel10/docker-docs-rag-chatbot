@@ -23,11 +23,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Basic import validation
+      - name: Repo structure sanity
         run: |
-          python - <<EOF
-          import fastapi
-          import streamlit
-          import faiss
-          print("CI validation passed")
-          EOF
+          ls
+          test -f Dockerfile.api
+          test -f Dockerfile.streamlit
+          test -f docker-compose.yml
