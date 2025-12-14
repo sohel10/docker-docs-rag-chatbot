@@ -54,7 +54,7 @@ transparent source attribution.
 ## 🧱 RAG Architecture
 
 <p align="center">
-  <img src="rag.png" alt="RAG Pipeline Architecture" width="400"/>
+  <img src="rag.png" alt="RAG Pipeline Architecture" width="300"/>
 </p>
 
 <p align="center">
