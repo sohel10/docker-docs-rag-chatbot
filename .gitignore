@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environments
+.env
+.venv
+env/
+venv/
+conda-env/
+
+# Data artifacts
+data/processed/
+data/vectorstore/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/
