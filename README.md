@@ -31,24 +31,23 @@ transparent source attribution.
 
 
 ## 🧱 Architecture
-
-Documents (.md / .pdf)
-↓
-Text Extraction
-↓
-Chunking
-↓
-Embeddings (Sentence Transformers)
-↓
-FAISS Vector Store
-↓
-Retriever
-↓
-Ollama LLM
-↓
-Answer + Sources
+System Overview
+<p align="center"> <img src="api.png" alt="FastAPI RAG API" width="85%"> </p> <p align="center"> <img src="streamlit.png" alt="Streamlit RAG Chat UI" width="85%"> </p>
+Data & Inference Flow
+<p align="center"> <img src="rag.png" alt="RAG Pipeline Architecture" width="70%"> </p>
 
 **Data Flow:** Documents → Chunking → Embeddings → FAISS → FastAPI → Streamlit
+
+# Why this works (important)
+
+api.png, streamlit.png, rag.png are in repo root
+
+GitHub README automatically resolves relative paths
+
+<p align="center"> keeps it clean and recruiter-friendly
+
+Width keeps it readable on laptop & mobile
+
 
 ## 📁 Project Structure
 
