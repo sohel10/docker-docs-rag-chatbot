@@ -173,9 +173,6 @@ Under **Deployment** section:
 ```md
 ## 🚀 Deployment (Docker Compose + AWS EC2)
 
-<p align="center">
-  <img src="api.png" width="750"/>
-</p>
 
 - API (FastAPI) and UI (Streamlit) run as separate services
 - Ollama runs locally inside a container for private LLM inference
