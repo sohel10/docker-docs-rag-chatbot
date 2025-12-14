@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="./api.png" width="900"/>
-</p>
-
 # 📦 Docker Docs RAG Chatbot
 
 ## 🚀 FastAPI Backend
