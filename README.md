@@ -51,41 +51,42 @@ Answer + Sources
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
+```text
 docker-docs-rag-chatbot/
 ├── data/
-│   ├── raw_docs/              # Markdown & PDF source documents
+│   ├── raw_docs/                 # Markdown & PDF source documents
 │   │   ├── docker_build.md
 │   │   ├── docker_compose.md
 │   │   ├── docker_engine.md
 │   │   └── NIST.SP.800-190.pdf
 │   │
-│   ├── processed/             # Intermediate artifacts
-│   │   └── chunks.json        # Chunked document text
+│   ├── processed/                # Intermediate artifacts
+│   │   └── chunks.json
 │   │
-│   └── vectorstore/faiss/     # FAISS vector index
+│   └── vectorstore/faiss/        # FAISS vector index
 │       ├── index.faiss
 │       └── index.pkl
 │
 ├── src/
-│   ├── ingest.py              # Extract text from docs
-│   ├── embed_faiss.py         # Create embeddings + FAISS index
-│   ├── rag_core.py            # RAG engine (retriever + LLM)
-│   ├── api.py                 # FastAPI backend
-│   └── streamlit_app.py       # Streamlit chat UI
+│   ├── ingest.py                 # Extract text from docs
+│   ├── embed_faiss.py            # Create embeddings + FAISS index
+│   ├── rag_core.py               # RAG engine (retriever + LLM)
+│   ├── api.py                    # FastAPI backend
+│   └── streamlit_app.py          # Streamlit chat UI
 │
-├── Dockerfile.api              # FastAPI container
-├── Dockerfile.streamlit        # Streamlit UI container
-├── docker-compose.yml          # Orchestrates API + UI + Ollama
+├── Dockerfile.api                # FastAPI container
+├── Dockerfile.streamlit          # Streamlit UI container
+├── docker-compose.yml            # API + UI + Ollama orchestration
 │
-├── requirements.txt            # Python dependencies
-├── README.md                   # Project documentation
+├── requirements.txt              # Python dependencies
+├── README.md                     # Project documentation
 └── LICENSE
 
 
 
----
+
 
 ## ⚙️ Setup
 
