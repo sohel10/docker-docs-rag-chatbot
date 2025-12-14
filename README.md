@@ -1,5 +1,13 @@
-
 # 📦 Docker Docs RAG Chatbot
+
+<p align="center">
+  <img src="api.png" alt="FastAPI RAG API" width="900"/>
+</p>
+
+<p align="center">
+  <em>FastAPI service exposing document-grounded RAG inference</em>
+</p>
+
 
 A production-style Retrieval-Augmented Generation (RAG) system that answers questions strictly from Docker documentation and security PDFs, with transparent source attribution.
 Built with FastAPI, Streamlit, FAISS, Ollama, and Docker Compose, this project demonstrates end-to-end AI system design, from document ingestion to API + UI deployment. 
@@ -22,6 +30,16 @@ transparent source attribution.
 
 ## 🚀 Features
 
+## 💬 Streamlit Chat UI
+
+<p align="center">
+  <img src="streamlit.png" alt="Streamlit RAG Chat UI" width="900"/>
+</p>
+
+<p align="center">
+  <em>Interactive chat UI for querying Docker documentation with source attribution</em>
+</p>
+
 - 📄 Supports **Markdown (.md)** and **PDF** documents
 - 🔍 Semantic search with **FAISS**
 - 🧠 Local LLM inference using **Ollama (LLaMA 3)**
@@ -32,28 +50,21 @@ transparent source attribution.
 
 ## 🧱 Architecture
 
-### FastAPI Backend
+
+
+
+## 🧱 RAG Architecture
+
 <p align="center">
-  <img src="api.png" width="85%">
-  <br/>
-  <em>FastAPI service exposing document-grounded RAG inference</em>
+  <img src="rag.png" alt="RAG Pipeline Architecture" width="800"/>
 </p>
 
-### Streamlit UI
 <p align="center">
-  <img src="streamlit.png" width="85%">
-  <br/>
-  <em>Interactive chat UI for querying Docker documentation</em>
+  <em>
+    Document ingestion → embeddings → FAISS retrieval → Ollama (LLaMA 3) → FastAPI → Streamlit UI
+  </em>
 </p>
 
-### RAG Pipeline
-<p align="center">
-  <img src="rag.png" width="70%">
-  <br/>
-  <em>End-to-end Retrieval-Augmented Generation workflow</em>
-</p>
-
-**Data Flow:** Documents → Chunking → Embeddings → FAISS → FastAPI → Streamlit
 
 # Why this works (important)
 
@@ -68,19 +79,15 @@ Width keeps it readable on laptop & mobile
 
 ## 📁 Project Structure
 
+## 📂 Project Structure
+
 ```text
 docker-docs-rag-chatbot/
 ├── data/
 │   ├── raw_docs/                 # Markdown & PDF source documents
-│   │   ├── docker_build.md
-│   │   ├── docker_compose.md
-│   │   ├── docker_engine.md
-│   │   └── NIST.SP.800-190.pdf
-│   │
 │   ├── processed/                # Intermediate artifacts
 │   │   └── chunks.json
-│   │
-│   └── vectorstore/faiss/        # FAISS vector index
+│   └── vectorstore/faiss/         # FAISS vector index
 │       ├── index.faiss
 │       └── index.pkl
 │
@@ -94,12 +101,9 @@ docker-docs-rag-chatbot/
 ├── Dockerfile.api                # FastAPI container
 ├── Dockerfile.streamlit          # Streamlit UI container
 ├── docker-compose.yml            # API + UI + Ollama orchestration
-│
 ├── requirements.txt              # Python dependencies
-├── README.md                     # Project documentation
+├── README.md
 └── LICENSE
-
-
 
 
 
@@ -166,11 +170,17 @@ pip install -r requirements.txt
 
 Run API:
 
-uvicorn src.api:app --host 0.0.0.0 --port 8000
+## ✅ 5️⃣ Add a short “Deployment” visual explanation
 
+Under **Deployment** section:
 
-Run Streamlit:
+```md
+## 🚀 Deployment (Docker Compose + AWS EC2)
 
-streamlit run src/streamlit_app.py --server.port 8501 --server.address 0.0.0.0
-=======
-# docker-docs-rag-chatbot
+<p align="center">
+  <img src="api.png" width="750"/>
+</p>
+
+- API (FastAPI) and UI (Streamlit) run as separate services
+- Ollama runs locally inside a container for private LLM inference
+- Services can be scaled independently
