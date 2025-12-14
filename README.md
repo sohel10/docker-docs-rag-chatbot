@@ -1,3 +1,4 @@
+
 # 📦 Docker Docs RAG Chatbot
 
 A production-style **Retrieval-Augmented Generation (RAG)** chatbot built using
@@ -135,3 +136,5 @@ uvicorn src.api:app --host 0.0.0.0 --port 8000
 Run Streamlit:
 
 streamlit run src/streamlit_app.py --server.port 8501 --server.address 0.0.0.0
+=======
+# docker-docs-rag-chatbot
